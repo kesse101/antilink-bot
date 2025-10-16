@@ -17,7 +17,7 @@ async def delete_links(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await message.delete()
             print(f"🧹 Deleted: {message.text}")
         except Exception as e:
-            print(f"❌ Error: {e}")
+            print(f"❌ Error deleting message: {e}")
 
 async def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
